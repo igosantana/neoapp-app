@@ -2,25 +2,26 @@ import styled from 'styled-components'
 
 export const CardContainer = styled.div`
     width: 100%;
-    height: auto;
     display: flex;
     flex-flow: column;
-    padding: 5px;
     border: 1px solid black;
     border-radius: 10px;
-`
-export const ImageContainer = styled.div<{background: string}>`
-    width: 100%;
-    background-image:${props => `url(${props.background})`};
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 `
 
 export const DetailContainer = styled.div`
     width: 100%;
     display: flex;
+    padding: 5px;
     flex-flow: column;
-    gap: 10px 10px;
+    gap: 5px;
+`
+export const CardButton = styled.button`
+    width: 100%;
+    background-color: gray;
+    padding: 8px;
+    text-transform: uppercase;
+    border: none;
+    border: 1px solid black;
+    border-radius: 8px;
 `
 

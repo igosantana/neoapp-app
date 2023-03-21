@@ -7,10 +7,11 @@ export const Header = styled.header`
 `
 export const Container = styled.main`
   width: 100%;
-  padding: 0 10px;
 `
 export const SectionCards = styled.section`
   width: 100%;
   display: flex;
+  gap: 10px;
   flex-flow: column;
+  padding: 8px;
 `

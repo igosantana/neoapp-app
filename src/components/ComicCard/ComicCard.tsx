@@ -1,14 +1,21 @@
 import { ComicData } from "@/common/interfaces/cards.interfaces"
-import { CardContainer, DetailContainer, ImageContainer } from "./style"
+import { CardButton, CardContainer, DetailContainer } from "./style"
+
 interface ComicCardProps {
     data: ComicData;
 }
+
 export const ComicCard = ({data}: ComicCardProps) => {
+    const creatorName = data.creators.items?.find(i => i.role === "writer")
     return (
         <CardContainer>
-            <ImageContainer background={data.images[0].path} />
             <DetailContainer>
-                <h2>{data.title}</h2>
+                <h3>{data.title}</h3>
+                {creatorName && <span>{creatorName.name}</span>}
+                <span>R$<span>{data.prices[0].price}</span></span>
+                <CardButton>
+                    Comprar
+                </CardButton>
             </DetailContainer>
         </CardContainer>
     )
