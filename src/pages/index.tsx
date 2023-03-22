@@ -2,7 +2,7 @@
 // 5d3a47c04b825776aa8600c8ce4a9afa1601a8c8 - private key
 
 import { NextPage } from "next";
-import { Home } from "./Home";
+import { Home } from "../components/Home";
 
 const IndexPage: NextPage = () => {
   return (
