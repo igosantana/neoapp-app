@@ -1,15 +1,16 @@
-// bccc63563d81110837fe6e2469dd9e48 -public key
-// 5d3a47c04b825776aa8600c8ce4a9afa1601a8c8 - private key
-
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import { NextPage } from "next";
 import { Home } from "../components/Home";
 
 const IndexPage: NextPage = () => {
   return (
     <>
+      <Header />
       <Home />
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

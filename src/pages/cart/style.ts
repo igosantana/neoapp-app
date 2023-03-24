@@ -8,16 +8,13 @@ export const Container = styled.main`
   flex-direction: column;
   align-items: center;
   h1 {
-    font-size: bold;
     margin-bottom: 20px;
   }
 `;
-
-export const SectionCards = styled.section`
+export const CartContainer = styled.section`
   width: 100%;
+  padding: 10px;
   display: flex;
-  gap: 20px;
-  align-items: center;
-  flex-flow: column;
-  padding: 8px;
+  flex-direction: column;
+  gap: 10px;
 `;
