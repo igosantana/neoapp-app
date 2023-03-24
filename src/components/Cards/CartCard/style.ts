@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const CartCardContainer = styled.div`
   width: 100%;
+  max-width: 920px;
   display: flex;
   height: 140px;
   gap: 5px;
@@ -10,6 +11,7 @@ export const CartCardContainer = styled.div`
 
 export const ImageContainer = styled.div`
   width: 30%;
+  text-align: right;
   img {
     width: 100%;
     max-width: 88.5px;
@@ -20,17 +22,22 @@ export const ImageContainer = styled.div`
 
 export const DetailContainer = styled.div`
   width: 70%;
-  height: 100%;
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 5px;
   div {
     width: 100%;
     display: flex;
     gap: 5px;
     align-items: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    h4 {
+      font-size: 24px;
+    }
   }
 `;
 

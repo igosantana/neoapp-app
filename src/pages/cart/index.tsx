@@ -1,9 +1,14 @@
-import { CartContainer, Container } from "./style";
+import {
+  CartContainer,
+  CartSection,
+  CheckoutContainer,
+  Container,
+} from "./style";
 import { useSelector } from "react-redux";
 import { ItemCart } from "@/redux/cartSlice";
-import { CartCard } from "@/components/CartCard";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { CartCard } from "@/components/Cards/CartCard";
 
 const Cart: React.FC = () => {
   const cart = useSelector((state: { cart: ItemCart[] }) => state.cart);
@@ -22,24 +27,29 @@ const Cart: React.FC = () => {
       <Header />
       <Container>
         <h1>Shopping Cart</h1>
-        <CartContainer>
-          {cart.map((item) => (
-            <CartCard
-              key={item.id}
-              image={item.image}
-              price={item.price}
-              quantity={item.quantity}
-              title={item.title}
-              id={item.id}
-            />
-          ))}
-          <div>
-            <p>
-              total ({getTotal().totalQuantity} items) :{" "}
-              <strong>${getTotal().totalPrice}</strong>
-            </p>
-          </div>
-        </CartContainer>
+        <CartSection>
+          <CartContainer>
+            {cart.map((item) => (
+              <CartCard
+                key={item.id}
+                image={item.image}
+                price={item.price}
+                quantity={item.quantity}
+                title={item.title}
+                id={item.id}
+              />
+            ))}
+          </CartContainer>
+          <CheckoutContainer>
+            <div>
+              <p>
+                Total ({getTotal().totalQuantity} items) :{" "}
+                <strong>${getTotal().totalPrice.toFixed(2)}</strong>
+              </p>
+            </div>
+            <button>checkout</button>
+          </CheckoutContainer>
+        </CartSection>
       </Container>
       <Footer />
     </>

@@ -6,10 +6,29 @@ export const HeaderContainer = styled.header`
   max-height: 70px;
   background-color: #151515;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
+  z-index: 1000;
+`;
+
+export const LogoAndImageContainer = styled.nav`
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 1024px;
+    padding: 0 60px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+    padding: 0 120px;
+  }
 `;
 
 export const LogoContainer = styled.div`

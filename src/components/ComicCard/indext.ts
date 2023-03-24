@@ -1,1 +1,0 @@
-export {ComicCard} from './ComicCard'

@@ -1,10 +1,8 @@
 import {
   decrementQuantity,
   incrementQuantity,
-  ItemCart,
   removeItem,
 } from "@/redux/cartSlice";
-import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import {
   CartCardContainer,

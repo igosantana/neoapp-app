@@ -36,16 +36,29 @@ const Comic = () => {
       <Header />
       <Container>
         <ComicContainer>
-          <ImageTitleContainer>
-            <h2>{comicData.title}</h2>
+          <ImageTitleContainer
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
             <img src={imgUrl} alt='Comic image' />
           </ImageTitleContainer>
           <DetailContainer>
+            <h2>{comicData.title}</h2>
             <h3>Published:</h3>
             <span>{date.toDateString()}</span>
             <h3>Cover Artist:</h3>
             <span>{artist?.name}</span>
-            <p>{comicData.description && comicData.description}</p>
+            <h3>Description:</h3>
+            <p>
+              {comicData.description
+                ? comicData.description
+                : "No description already..."}
+            </p>
             <div>
               <ButtonAddToCart
                 children='add to cart'

@@ -21,15 +21,9 @@ export const PaginationButton = styled.div<{ disabled: boolean }>`
 const enabled = `
     cursor: pointer;
     color: var(--primary-color)};
-    transition: background-color 0.2s;
 
     &:hover {
-        color: white;
-        background-color: red;
-    }
-
-    &:active {
-        background-color: purple;
+        scale: 1.2;
     }
 `;
 const disabled = `

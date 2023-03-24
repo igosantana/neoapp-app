@@ -9,5 +9,13 @@ export const ButtonAddToCart = styled.button`
   border: none;
   color: var(--white);
   background-color: var(--primary-color);
-  box-shadow: 10px 5px 5px black;
+  box-shadow: 10px 5px 5px gray;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--primary-hover);
+  }
+  &:active {
+    box-shadow: none;
+    transform: translateY(4px);
+  }
 `;

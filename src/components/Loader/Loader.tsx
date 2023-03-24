@@ -1,7 +1,11 @@
+import { LoaderComponent, LoaderContainer } from "./style";
+
 export const Loader = () => {
   return (
     <>
-      <Loader />
+      <LoaderContainer>
+        <LoaderComponent></LoaderComponent>
+      </LoaderContainer>
     </>
   );
 };
