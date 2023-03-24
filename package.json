@@ -9,9 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.3.0",
-    "@fortawesome/free-solid-svg-icons": "^6.3.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
     "@heroicons/react": "^2.0.16",
     "@reduxjs/toolkit": "^1.9.3",
     "@types/node": "18.15.5",
@@ -25,7 +22,6 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-paginate": "^8.1.4",
     "react-redux": "^8.0.5",
     "redux-persist": "^6.0.0",
     "styled-components": "^5.3.9",
@@ -33,7 +29,6 @@
     "typescript": "5.0.2"
   },
   "devDependencies": {
-    "@types/react-paginate": "^7.1.1",
     "@types/redux-persist": "^4.3.1",
     "@types/styled-components": "^5.1.26"
   }

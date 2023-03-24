@@ -9,7 +9,7 @@ export const ButtonAddToCart = styled.button`
   border: none;
   color: var(--white);
   background-color: var(--primary-color);
-  box-shadow: 10px 5px 5px gray;
+  box-shadow: 5px 5px 5px black;
   cursor: pointer;
   &:hover {
     background-color: var(--primary-hover);
