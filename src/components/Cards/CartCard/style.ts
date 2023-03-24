@@ -30,7 +30,8 @@ export const DetailContainer = styled.div`
   div {
     width: 100%;
     display: flex;
-    gap: 5px;
+    gap: 8px;
+    justify-content: left;
     align-items: center;
   }
 
@@ -45,12 +46,21 @@ export const QuantityButton = styled.button`
   width: 18px;
   height: 18px;
   font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
   background-color: var(--primary-color);
   color: white;
   text-align: center;
   border: none;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px #f45f61;
   cursor: pointer;
+
+  &:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #f45f61;
+  }
 `;
 
 export const RemoveButton = styled.button`
