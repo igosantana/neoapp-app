@@ -19,4 +19,5 @@ npm run dev
 ```
 
 ## Link
-https://neoapp-marvel.vercel.app/
+
+https://neoapp-app.vercel.app/
