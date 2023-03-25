@@ -32,7 +32,7 @@ export const CartCard: React.FC<CartCardProps> = ({
   return (
     <CartCardContainer>
       <ImageContainer>
-        <Image src={image} alt='comic image' />
+        <img src={image} alt='comic image' />
       </ImageContainer>
       <DetailContainer>
         <h4>{title}</h4>

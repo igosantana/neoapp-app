@@ -3,8 +3,8 @@ import useSWR from "swr";
 import { api } from "@/common/services/api";
 import { useState } from "react";
 import { Pagination } from "@/components/Pagination";
-import { ComicCard } from "../Cards/ComicCard";
-import { Loader } from "../Loader";
+import { Loader } from "@/components/Loader";
+import { ComicCard } from "@/components/Cards/ComicCard";
 
 export const Home: React.FC = (): JSX.Element => {
   const [currentPage, setCurrentPage] = useState<number>(1);

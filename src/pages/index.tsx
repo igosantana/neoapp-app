@@ -1,7 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { Home } from "@/components/Pages/Home";
 import { NextPage } from "next";
-import { Home } from "../components/Home";
 
 const IndexPage: NextPage = () => {
   return (

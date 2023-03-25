@@ -86,7 +86,4 @@ export const DetailContainer = styled.div`
       font-size: 24px;
     }
   }
-  /* @media screen and (min-width: 1024px) {
-    justify-content: center;
-  } */
 `;
