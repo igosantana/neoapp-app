@@ -1,6 +1,6 @@
 import { FooterContainer, TextFooterContainer } from "./style";
 
-export const Footer = () => {
+export const Footer: React.FC = (): JSX.Element => {
   return (
     <FooterContainer>
       <TextFooterContainer>

@@ -8,17 +8,15 @@ interface ButtonProps {
   image: string;
   price: number;
   quantity: number;
-  children: string;
 }
 
-export const ButtonAddToCart = ({
+export const ButtonAddToCart: React.FC<ButtonProps> = ({
   id,
   title,
   image,
   price,
   quantity = 0,
-  children,
-}: ButtonProps) => {
+}): JSX.Element => {
   const dispatch = useDispatch();
   return (
     <Button
@@ -34,7 +32,7 @@ export const ButtonAddToCart = ({
         )
       }
     >
-      {children}
+      Add to Cart
     </Button>
   );
 };

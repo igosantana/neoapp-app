@@ -9,8 +9,9 @@ import { ItemCart } from "@/redux/cartSlice";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CartCard } from "@/components/Cards/CartCard";
+import { NextPage } from "next";
 
-const Cart: React.FC = () => {
+const Cart: NextPage = (): JSX.Element => {
   const cart = useSelector((state: { cart: ItemCart[] }) => state.cart);
   const getTotal = () => {
     let totalQuantity = 0;

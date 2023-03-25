@@ -7,12 +7,13 @@ import {
 } from "./style";
 import Link from "next/link";
 import { ButtonAddToCart } from "../../Buttons/ButtonAddToCart";
+import Image from "next/image";
 
 interface ComicCardProps {
   data: ComicData;
 }
 
-export const ComicCard = ({ data }: ComicCardProps) => {
+export const ComicCard: React.FC<ComicCardProps> = ({ data }): JSX.Element => {
   const creatorName = data.creators.items?.find(
     (i) => i.role === "writer" || "letterer"
   );
@@ -27,7 +28,7 @@ export const ComicCard = ({ data }: ComicCardProps) => {
       <DetailContainer>
         <Link legacyBehavior href={`/comic/${data.id}`}>
           <a>
-            <h3>{data.title}</h3>
+            <h3 id='comic-title'>{data.title}</h3>
           </a>
         </Link>
         <span>{creatorName?.name}</span>
@@ -37,7 +38,6 @@ export const ComicCard = ({ data }: ComicCardProps) => {
       </DetailContainer>
       <ButtonContainer>
         <ButtonAddToCart
-          children='Add to Cart'
           id={data.id}
           title={data.title}
           price={data.prices[0].price}

@@ -6,7 +6,7 @@ import { Pagination } from "@/components/Pagination";
 import { ComicCard } from "../Cards/ComicCard";
 import { Loader } from "../Loader";
 
-export const Home: React.FC = () => {
+export const Home: React.FC = (): JSX.Element => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const offset = currentPage === 1 ? 0 : currentPage * 10;
   const { data, error, isLoading } = useSWR(`${offset}`, api.getComics);

@@ -3,6 +3,7 @@ import {
   incrementQuantity,
   removeItem,
 } from "@/redux/cartSlice";
+import Image from "next/image";
 import { useDispatch } from "react-redux";
 import {
   CartCardContainer,
@@ -20,18 +21,18 @@ interface CartCardProps {
   quantity: number;
 }
 
-export const CartCard = ({
+export const CartCard: React.FC<CartCardProps> = ({
   title,
   image,
   price,
   quantity = 0,
   id,
-}: CartCardProps) => {
+}): JSX.Element => {
   const dispatch = useDispatch();
   return (
     <CartCardContainer>
       <ImageContainer>
-        <img src={image} alt='comic image' />
+        <Image src={image} alt='comic image' />
       </ImageContainer>
       <DetailContainer>
         <h4>{title}</h4>
@@ -40,15 +41,24 @@ export const CartCard = ({
           <strong>{price}</strong>
         </p>
         <div>
-          <QuantityButton onClick={() => dispatch(decrementQuantity(id))}>
+          <QuantityButton
+            id='remove-one-item'
+            onClick={() => dispatch(decrementQuantity(id))}
+          >
             -
           </QuantityButton>
           <p>{quantity}</p>
-          <QuantityButton onClick={() => dispatch(incrementQuantity(id))}>
+          <QuantityButton
+            id='add-one-item'
+            onClick={() => dispatch(incrementQuantity(id))}
+          >
             +
           </QuantityButton>
         </div>
-        <RemoveButton onClick={() => dispatch(removeItem(id))}>
+        <RemoveButton
+          id='remove-item-from-cart'
+          onClick={() => dispatch(removeItem(id))}
+        >
           Remove
         </RemoveButton>
       </DetailContainer>

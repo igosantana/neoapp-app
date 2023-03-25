@@ -11,19 +11,20 @@ interface PropsPagination {
   limit: number;
 }
 
-export const Pagination = ({
+export const Pagination: React.FC<PropsPagination> = ({
   page,
   setPage,
   total,
   limit,
-}: PropsPagination) => {
-  const goToFirstPage = () => setPage(1);
-  const goToLastPage = () => setPage(getLastPage());
-  const incrementPage = () => page < getLastPage() && setPage(page + 1);
-  const decrementPage = () => page > 1 && setPage(page - 1);
-  const atFirstPage = () => page === 1;
-  const atLastPage = () => page === getLastPage();
-  const getLastPage = () => Math.ceil(total / limit);
+}): JSX.Element => {
+  const goToFirstPage = (): void => setPage(1);
+  const goToLastPage = (): void => setPage(getLastPage());
+  const incrementPage = (): void | boolean =>
+    page < getLastPage() && setPage(page + 1);
+  const decrementPage = (): void | boolean => page > 1 && setPage(page - 1);
+  const atFirstPage = (): boolean => page === 1;
+  const atLastPage = (): boolean => page === getLastPage();
+  const getLastPage = (): number => Math.ceil(total / limit);
 
   return (
     <PaginationContainer>

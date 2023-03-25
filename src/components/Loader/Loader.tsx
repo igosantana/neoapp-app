@@ -1,6 +1,6 @@
 import { LoaderComponent, LoaderContainer } from "./style";
 
-export const Loader = () => {
+export const Loader: React.FC = () => {
   return (
     <>
       <LoaderContainer>

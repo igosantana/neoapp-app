@@ -3,6 +3,8 @@ import { ButtonAddToCart } from "@/components/Buttons/ButtonAddToCart";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Loader } from "@/components/Loader";
+import { NextPage } from "next";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import {
@@ -12,7 +14,7 @@ import {
   ImageTitleContainer,
 } from "./style";
 
-const Comic = () => {
+const Comic: NextPage = (): JSX.Element => {
   const router = useRouter();
   const { comicId } = router.query;
   const { data, error, isLoading } = useSWR(comicId, api.getOneComic);
@@ -61,7 +63,6 @@ const Comic = () => {
             </p>
             <div>
               <ButtonAddToCart
-                children='add to cart'
                 id={comicData.id}
                 image={imgUrl}
                 price={comicData.prices[0].price}
