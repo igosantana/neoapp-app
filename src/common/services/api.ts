@@ -11,7 +11,7 @@ const getComics = async (offSet = 0): Promise<ComicsResData> => {
 
 const getOneComic = async (comicId: string): Promise<OneComicReqRes> => {
   const response = await axios.get<OneComicReqRes>(
-    `https://gateway.marvel.com/v1/public/comics/${comicId}?ts=1&apikey${process.env.NEXT_PUBLIC_API_KEY}&hash=${process.env.NEXT_PUBLIC_HASH_KEY}`
+    `https://gateway.marvel.com/v1/public/comics/${comicId}?ts=1&apikey=${process.env.NEXT_PUBLIC_API_KEY}&hash=${process.env.NEXT_PUBLIC_HASH_KEY}`
   );
   return response.data;
 };
